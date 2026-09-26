@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* PENGATURAN UMUM */
+* { box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; color: #038909; }
+.bg-krem { background-color: #f1f8c9; }
+.bg-hijau-tua { background-color: #038909; }
+.teks-hijau-tua { color: #038909; }
+.btn-kuning { background-color: #edd51c; color: #038909; border: none; padding: 12px 30px; font-weight: 700; border-radius: 20px; cursor: pointer; }
+.puzzle-bg { background-size: contain; background-repeat: no-repeat; background-position: center; }
+
+/* HEADER & NAVIGASI */
+header { background-color: #038909; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; }
+.logo-img { height: 40px; }
+nav { display: flex; align-items: center; gap: 20px; }
+nav a { color: white; text-decoration: none; font-size: 14px; }
+nav a.active { font-weight: 700; }
+.btn-masuk { background-color: #edd51c; color: #038909; padding: 8px 20px; border-radius: 20px; font-weight: 700; }
+
+/* LANDING PAGE - HERO SECTION */
+.hero-section { display: flex; justify-content: space-between; align-items: center; padding: 60px 80px; }
+.hero-kiri { flex: 1; padding-right: 40px; }
+.hero-kiri h1 { font-size: 2.5em; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+.hero-kanan { flex: 1; text-align: right; }
+.hero-img { max-width: 100%; border-radius: 20px; }
+
+/* LANDING PAGE - ARAH TEPAT */
+.arah-tepat-section { 
+    color: white; 
+    text-align: center; 
+    padding: 80px 20px; 
+    /* Mengatur letak gambar 1 (puzzle kiri) dan gambar 2 (puzzle kanan) */
+    background-position: left bottom, right center; 
+    /* Memastikan kedua puzzle tidak diulang penuhi layar */
+    background-repeat: no-repeat, no-repeat; 
+    /* Mengatur ukuran (lebar tinggi) masing-masing puzzle, bisa Anda ubah angkanya jika kurang besar */
+    background-size: 250px auto, 200px auto;
+}
+.arah-tepat-section h3 { font-weight: 400; margin: 0; font-size: 1.5em; }
+.arah-tepat-section h2 { font-size: 2.5em; margin: 5px 0 20px 0; font-weight: 700; }
+.arah-tepat-section p { max-width: 700px; margin: 0 auto 30px auto; font-size: 15px; line-height: 1.6; }
+
+/* LANDING PAGE - AMBISI KAMI */
+.ambisi-section { display: flex; padding: 60px 80px; align-items: center; gap: 40px; }
+.ambisi-kiri { flex: 1; padding: 80px 60px 80px 100px; text-align: center; }
+.ambisi-kiri h2 { font-size: 2em; margin-bottom: 10px; }
+.ambisi-kanan { flex: 1; }
+.ambisi-kanan img { width: 100%; border-radius: 20px; }
+
+/* LANDING PAGE - WE NEED YOU */
+.we-need-section { text-align: center; padding: 40px 20px; }
+.badge-hijau { background-color: #038909; color: white; display: inline-block; padding: 10px 40px; border-radius: 30px; font-size: 1.2em; font-weight: 700; margin-bottom: 20px; }
+
+/* LANDING PAGE - DONASI SEKARANG */
+.donasi-sekarang-section { display: flex; padding: 60px 80px; align-items: center; }
+.donasi-puzzle-kiri { flex: 1; padding: 100px 60px; text-align: center; color: #038909; }
+.donasi-puzzle-kiri h2 { font-size: 2.5em; margin: 0 0 10px 0; }
+.donasi-teks-kanan { flex: 1; color: white; padding-left: 40px; }
+.donasi-teks-kanan p { font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
+
+/* LANDING PAGE - INSIGHT & BERITA */
+.insight-section { text-align: center; padding: 60px 80px; }
+.insight-section h2 { font-size: 2em; margin-bottom: 40px; }
+.berita-container { display: flex; justify-content: center; align-items: center; gap: 30px; }
+.berita-card { background-color: #a5d04b; border-radius: 20px; padding: 20px; width: 350px; text-align: left; }
+.berita-card img { width: 100%; border-radius: 15px; height: 180px; object-fit: cover; }
+.berita-card .tanggal { font-size: 11px; margin: 15px 0 5px 0; color: #333; }
+.berita-card h4 { margin: 0; font-size: 14px; }
+.arrow-btn { background-color: #edd51c; border-radius: 50%; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; cursor: pointer; }
+
+/* LAYANAN KAMI - SEARCH & MAP */
+.search-section { text-align: center; padding: 40px 20px; }
+.search-bar { display: inline-flex; background: white; border-radius: 30px; border: 2px solid #038909; overflow: hidden; width: 600px; max-width: 100%; }
+.search-bar input { border: none; outline: none; padding: 15px 20px; flex: 1; font-family: 'Poppins'; }
+.search-bar button { border-radius: 0; margin: 0; }
+.map-section { padding: 0 80px 40px 80px; }
+.map-container { background-color: #a5d04b; border-radius: 20px; padding: 20px; text-align: center; }
+.map-header { color: #038909; font-weight: 700; margin-bottom: 15px; font-size: 1.2em; }
+.map-image { width: 100%; border-radius: 15px; height: 250px; object-fit: cover; background-color: white; }
+
+/* LAYANAN KAMI - KARTU KEBUTUHAN */
+.kebutuhan-section { padding: 0 80px; }
+.kategori-row { margin-bottom: 40px; }
+.judul-kategori { display: flex; align-items: center; gap: 10px; font-size: 1.2em; margin-bottom: 20px; }
+.dot { width: 15px; height: 15px; border-radius: 50%; }
+.dot-merah { background-color: #ff4d4d; }
+.dot-oren { background-color: #ff9900; }
+.dot-hijau { background-color: #038909; }
+.card-slider { display: flex; align-items: center; gap: 30px; }
+.need-card { background: white; border-radius: 20px; padding: 20px; width: 350px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.card-tags { display: flex; gap: 5px; margin-bottom: 10px; font-size: 10px; font-weight: 700; position: relative; }
+.tag-verifikasi { background-color: #e6f9e6; color: #038909; padding: 3px 8px; border-radius: 10px; }
+.tag-mendesak { background-color: #ffe6e6; color: #ff4d4d; padding: 3px 8px; border-radius: 10px; }
+.tag-prioritas { background-color: #fff3e6; color: #ff9900; padding: 3px 8px; border-radius: 10px; }
+.tag-hari { background-color: #fff9cc; color: #cca300; padding: 3px 8px; border-radius: 10px; position: absolute; right: 0; }
+.need-card img { width: 100%; border-radius: 10px; height: 150px; object-fit: cover; background-color: #eee; margin-bottom: 10px; }
+.need-card h4 { margin: 0 0 5px 0; font-size: 16px; }
+.need-card p { margin: 0 0 15px 0; font-size: 13px; color: #555; }
+.score-bar { background-color: #e0e0e0; border-radius: 10px; height: 8px; width: 100%; margin-bottom: 5px; overflow: hidden; }
+.score-fill { background-color: #038909; height: 100%; }
+.score-text { font-size: 11px !important; color: #038909 !important; font-weight: 700; margin-bottom: 15px !important; }
+.btn-kuning-outline { background-color: white; border: 2px solid #edd51c; color: #038909; width: 100%; padding: 10px; border-radius: 20px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+.btn-kuning-outline:hover { background-color: #edd51c; }
+
+/* FOOTER */
+footer { text-align: center; padding: 40px 20px 20px 20px; background-color: white; border-top-left-radius: 50% 20px; border-top-right-radius: 50% 20px; }
+.sosmed-icons { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
+.sosmed-icons img { width: 35px; height: 35px; background-color: #edd51c; border-radius: 50%; padding: 8px; }
+.copyright { font-size: 12px; color: #666; }
