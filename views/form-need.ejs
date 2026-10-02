@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= judulWeb %></title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* CSS Khusus Formulir agar rapi kebal cache */
+        .form-container { max-width: 800px; margin: 40px auto; background: white; padding: 50px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .form-section { margin-bottom: 40px; }
+        .form-section h3 { border-bottom: 2px solid #a5d04b; padding-bottom: 10px; margin-bottom: 20px; color: #038909; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #333; font-size: 14px; }
+        .form-control { width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 10px; font-family: 'Poppins', sans-serif; font-size: 14px; box-sizing: border-box; outline: none; }
+        .form-control:focus { border-color: #038909; }
+        .file-upload { border: 2px dashed #a5d04b; padding: 20px; text-align: center; border-radius: 10px; background: #f9f9f9; cursor: pointer; }
+        .file-upload input { width: 100%; }
+        .checkbox-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 15px; font-size: 13px; color: #555; line-height: 1.5; }
+        .checkbox-item input { margin-top: 3px; }
+    </style>
+</head>
+<body class="bg-krem">
+    <header>
+        <div class="logo"><img src="https://github.com/dilaa62/NEEDMAP/blob/main/LOGO.png?raw=true" alt="Logo NEEDMAP" class="logo-img"></div>
+        <nav>
+            <a href="/tentang">Tentang NEEDMAP</a>
+            <a href="/perjalanan">Perjalanan Kami</a>
+            <a href="/jelajahi">Jelajahi NEED</a>
+            <a href="/buat" class="active">Buat NEED</a>
+            <a href="/insight">Insight dan Berita</a>
+            <a href="/masuk" class="btn-masuk">Masuk/Daftar</a>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2 class="teks-hijau-tua text-center" style="font-size: 2em; margin-bottom: 10px;">Formulir Pengajuan NEED</h2>
+        <p class="text-center" style="color: #666; margin-bottom: 40px;">Lengkapi data di bawah ini dengan benar agar proses verifikasi berjalan lancar.</p>
+
+        <form action="#" method="POST">
+            <!-- Bagian 1: Identitas Pengaju -->
+            <div class="form-section">
+                <h3>1. Identitas Pengaju</h3>
+                <div class="form-group">
+                    <label>Nama Lengkap / Nama Lembaga</label>
+                    <input type="text" class="form-control" placeholder="Masukkan nama lengkap atau nama lembaga">
+                </div>
+                <div class="form-group">
+                    <label>Kategori Pengaju</label>
+                    <select class="form-control">
+                        <option>Pilih Kategori...</option>
+                        <option>Yayasan atau lembaga sosial</option>
+                        <option>Panti asuhan</option>
+                        <option>Komunitas sosial</option>
+                        <option>Organisasi kemanusiaan</option>
+                        <option>Individu</option>
+                    </select>
+                </div>
+                <div style="display: flex; gap: 20px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label>Nomor WhatsApp Aktif</label>
+                        <input type="text" class="form-control" placeholder="Contoh: 081234567890">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label>Email Aktif</label>
+                        <input type="email" class="form-control" placeholder="contoh@email.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Alamat Lengkap Lengkap</label>
+                    <textarea class="form-control" rows="3" placeholder="Masukkan alamat lengkap pengaju/lembaga"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Rekening Penerima Bantuan</label>
+                    <input type="text" class="form-control" placeholder="Contoh: BCA 123456789 a.n. Panti A">
+                </div>
+                <div class="form-group">
+                    <label>Unggah Kartu Identitas (KTP Penanggung Jawab)</label>
+                    <div class="file-upload"><input type="file" accept="image/*,application/pdf"></div>
+                </div>
+            </div>
+
+            <!-- Bagian 2: Dokumen Pendukung -->
+            <div class="form-section">
+                <h3>2. Dokumen Pendukung Lembaga/Komunitas</h3>
+                <p style="font-size: 13px; color: #666; margin-top: -10px; margin-bottom: 20px;">Unggah dokumen profil, akta legalitas, izin operasional, atau dokumentasi kegiatan dalam format PDF.</p>
+                <div class="form-group">
+                    <div class="file-upload"><input type="file" accept="application/pdf" multiple></div>
+                </div>
+            </div>
+
+            <!-- Bagian 3: Informasi NEED -->
+            <div class="form-section">
+                <h3>3. Informasi NEED (Kebutuhan)</h3>
+                <div class="form-group">
+                    <label>Judul / Detail Kebutuhan</label>
+                    <input type="text" class="form-control" placeholder="Contoh: Membutuhkan susu bayi untuk 25 anak">
+                </div>
+                <div class="form-group">
+                    <label>Jenis Bantuan yang Diharapkan</label>
+                    <select class="form-control">
+                        <option>Pilih Jenis Bantuan...</option>
+                        <option>Dana</option>
+                        <option>Barang Kebutuhan Pokok</option>
+                        <option>Barang Sandang/Pakaian</option>
+                        <option>Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Rincian Kebutuhan Lengkap</label>
+                    <textarea class="form-control" rows="5" placeholder="Jelaskan secara rinci barang, jumlah, rentang usia (jika ada), atau detail dana yang dibutuhkan..."></textarea>
+                </div>
+            </div>
+
+            <!-- Bagian 4: Persetujuan -->
+            <div class="form-section">
+                <h3>4. Ketentuan Pengajuan NEED</h3>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ket1">
+                    <label for="ket1">Informasi yang diberikan adalah benar, lengkap, dan dapat dipertanggungjawabkan.</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ket2">
+                    <label for="ket2">Dokumen yang diberikan merupakan dokumen asli dan tidak dimanipulasi.</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ket3">
+                    <label for="ket3">Saya bertanggung jawab penuh atas penggunaan bantuan sesuai tujuan yang diajukan serta bersedia memberikan laporan setelah bantuan diterima.</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ket4">
+                    <label for="ket4">Needmap berhak melakukan verifikasi tambahan, menolak, atau menunda pengajuan apabila informasi tidak memenuhi ketentuan.</label>
+                </div>
+            </div>
+
+            <div class="text-center mt-30">
+                <button type="button" class="btn-hijau" style="padding: 15px 50px; font-size: 1.1em; width: 100%;">Kirim Pengajuan NEED</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

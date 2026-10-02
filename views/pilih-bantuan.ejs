@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= judulWeb %></title>
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- JURUS PAMUNGKAS: Kode desain (CSS) dimasukkan langsung ke HTML agar kebal dari Cache -->
+    <style>
+        .pilihan-bantuan-container {
+            display: flex;
+            flex-wrap: wrap; /* Kunci agar kartu otomatis turun ke bawah di layar kecil */
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            padding: 20px;
+        }
+        .bantuan-card {
+            background-color: #a5d04b;
+            border-radius: 20px;
+            padding: 40px 30px;
+            width: 100%; 
+            max-width: 300px; /* Membatasi lebar agar tetap rapi */
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            box-sizing: border-box; /* Mencegah kartu membludak keluar layar */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .bantuan-card h3 {
+            color: #038909;
+            font-size: 1.4em;
+            margin-top: 0;
+            font-weight: 700;
+        }
+        .bantuan-card p {
+            color: #038909;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .bantuan-card .btn-kuning {
+            width: 100%;
+            text-align: center;
+            margin-top: auto;
+            box-sizing: border-box;
+            display: block; /* Memastikan tombol terbaca utuh */
+        }
+    </style>
+</head>
+<body class="bg-krem">
+    <header>
+        <div class="logo"><img src="https://github.com/dilaa62/NEEDMAP/blob/main/LOGO.png?raw=true" alt="Logo NEEDMAP" class="logo-img"></div>
+        <nav>
+            <a href="/tentang">Tentang NEEDMAP</a>
+            <a href="/perjalanan">Perjalanan Kami</a>
+            <a href="/jelajahi" class="active">Jelajahi NEED</a>
+            <a href="/buat">Buat NEED</a>
+            <a href="/insight">Insight dan Berita</a>
+            <a href="/masuk" class="btn-masuk">Masuk/Daftar</a>
+        </nav>
+    </header>
+
+    <section class="p-50 text-center teks-hijau-tua">
+        <h1 style="font-size: 2.5em; margin-bottom: 10px;">Bagaimana kamu ingin membantu?</h1>
+        <p style="font-size: 1.1em; max-width: 700px; margin: 0 auto 20px auto;">Setiap NEED memiliki kebutuhan yang berbeda. Pilih bentuk dukungan yang paling sesuai untuk membantu memenuhi kebutuhan ini.</p>
+
+        <div class="pilihan-bantuan-container">
+            <!-- Kartu Dana -->
+            <div class="bantuan-card">
+                <h3>Bantu dengan Dana</h3>
+                <p>Bantu memenuhi kebutuhan melalui kontribusi dana yang akan digunakan sesuai rincian kebutuhan yang telah diajukan.</p>
+                <a href="/bantu-dana" class="btn-kuning mt-auto" style="text-decoration:none;">Lanjutkan</a>
+            </div>
+            <!-- Kartu Barang -->
+            <div class="bantuan-card">
+                <h3>Bantu dengan Barang</h3>
+                <p>Kirimkan barang yang sedang dibutuhkan secara langsung sesuai daftar kebutuhan.</p>
+                <a href="/bantu-barang" class="btn-kuning mt-auto" style="text-decoration:none;">Lanjutkan</a>
+            </div>
+            <!-- Kartu Cara Lain -->
+            <div class="bantuan-card">
+                <h3>Bantu dengan Cara Lain</h3>
+                <p>Punya bentuk dukungan lain yang dapat membantu memenuhi NEED ini?</p>
+                <a href="/bantu-lainnya" class="btn-kuning mt-auto" style="text-decoration:none;">Lanjutkan</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-krem">
+        <div class="sosmed-icons">
+            <img src="https://github.com/dilaa62/NEEDMAP/blob/main/yt.png?raw=true" alt="YouTube">
+            <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ig.png?raw=true" alt="Instagram">
+            <img src="https://github.com/dilaa62/NEEDMAP/blob/main/x.png?raw=true" alt="X">
+            <img src="https://github.com/dilaa62/NEEDMAP/blob/main/tiktok.png?raw=true" alt="TikTok">
+        </div>
+        <h3 class="teks-hijau-tua">Ikuti NEEDMAP untuk inspirasi kebaikan terbaru</h3>
+        <p class="copyright">© 2026 NEEDMAP. All Rights Reserved</p>
+    </footer>
+</body>
+</html>

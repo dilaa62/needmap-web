@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= judulWeb %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-krem">
+    <header>
+        <div class="logo"><img src="https://github.com/dilaa62/NEEDMAP/blob/main/LOGO.png?raw=true" alt="Logo NEEDMAP" class="logo-img"></div>
+        <nav><a href="/insight" class="active">← Kembali ke Insight</a></nav>
+    </header>
+
+    <section class="p-50" style="max-width: 900px; margin: 0 auto; background: white; border-radius: 20px; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <div class="text-center">
+            <span class="tag-kategori bg-hijau-muda teks-hijau-tua" style="font-size: 14px;"><%= artikel.kategori %></span>
+            <span style="font-size: 14px; color: #777; margin-left: 10px;"><%= artikel.tanggal %></span>
+            <h1 class="teks-hijau-tua mt-20" style="font-size: 2.5em;"><%= artikel.judul %></h1>
+        </div>
+
+        <div style="width: 100%; height: 400px; background-color: #ddd; border-radius: 20px; margin: 40px 0;">
+            <!-- Tempat gambar besar artikel -->
+        </div>
+
+        <div class="konten-artikel" style="font-size: 1.1em; color: #333; line-height: 1.8;">
+            <p><%= artikel.konten %></p>
+            <p>Dukungan Anda tidak hanya menyelesaikan masalah jangka pendek, tetapi juga memberikan harapan jangka panjang bagi mereka yang sedang berjuang.</p>
+        </div>
+
+        <div class="mt-50 text-center">
+            <a href="/insight" class="btn-kuning" style="text-decoration: none; padding: 12px 40px;">Baca Artikel Lainnya</a>
+        </div>
+    </section>
+</body>
+</html>

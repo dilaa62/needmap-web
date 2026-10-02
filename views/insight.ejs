@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= judulWeb %></title>
+    <link rel="stylesheet" href="/style.css?v=7">
+</head>
+<body class="bg-krem">
+    <header>
+        <div class="logo"><img src="https://github.com/dilaa62/NEEDMAP/blob/main/LOGO.png?raw=true" alt="Logo NEEDMAP" class="logo-img"></div>
+        <nav>
+            <a href="/tentang">Tentang NEEDMAP</a>
+            <a href="/perjalanan">Perjalanan Kami</a>
+            <a href="/jelajahi">Jelajahi NEED</a>
+            <a href="/buat">Buat NEED</a>
+            <a href="/insight" class="active">Insight dan Berita</a>
+            <a href="/masuk" class="btn-masuk">Masuk/Daftar</a>
+        </nav>
+    </header>
+
+    <section class="p-50">
+        <h1 class="teks-hijau-tua" style="font-size: 2.2em; margin-bottom: 5px;">Insight dan Berita</h1>
+        <p style="color: #555; margin-bottom: 30px;">Temukan cerita, informasi, dan inspirasi tentang bagaimana niat baik dapat menciptakan perubahan besar.</p>
+
+        <!-- Artikel Hero -->
+        <div class="insight-hero bg-white radius-20 p-30 flex-row">
+            <div class="flex-1"><img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib1.png?raw=true" alt="Hero Image" class="img-radius" style="height: 250px; background: #ddd;"></div>
+            <div class="flex-1 p-30">
+                <span class="tag-kategori bg-hijau-muda teks-hijau-tua">Cerita Dampak</span> <span style="font-size: 14px; color: #777;">20 September 2026</span>
+                <h2 class="teks-hijau-tua mt-20">Ketika Bantuan Hadir, Harapan Tumbuh di Panti Asuhan</h2>
+                <p>Kisah tentang bagaimana bantuan yang tepat dapat memenuhi kebutuhan anak-anak di panti asuhan...</p>
+                <a href="/artikel/harapan-tumbuh" class="btn-kuning mt-20" style="display: inline-block; text-decoration: none;">Baca Selengkapnya →</a>
+            </div>
+        </div>
+
+        <!-- Filter Topik -->
+        <div class="mt-50">
+            <h3 class="teks-hijau-tua">Jelajahi Berdasarkan Topik</h3>
+            <div class="filter-topik-container">
+                <button class="btn-filter active" onclick="filterTopik('Semua', this)">Semua</button>
+                <button class="btn-filter" onclick="filterTopik('Cerita Dampak', this)">Cerita Dampak</button>
+                <button class="btn-filter" onclick="filterTopik('Tips Donasi', this)">Tips Donasi</button>
+                <button class="btn-filter" onclick="filterTopik('Kabar NEEDMAP', this)">Kabar NEEDMAP</button>
+                <button class="btn-filter" onclick="filterTopik('Komunitas', this)">Komunitas</button>
+            </div>
+        </div>
+
+        <!-- Grid Cerita Menginspirasi -->
+        <div class="mt-50 flex-between">
+            <div>
+                <h2 class="teks-hijau-tua" style="margin-bottom: 0;">Cerita yang Menginspirasi</h2>
+                <p style="margin-top: 5px;">Karena Setiap Kebutuhan Punya Cerita</p>
+            </div>
+            <a href="#" class="teks-hijau-tua" style="font-weight: bold; text-decoration: none;">Lihat Semua →</a>
+        </div>
+
+        <div class="artikel-grid mt-30" id="daftar-artikel">
+            <!-- Kartu 1 -->
+            <div class="card-artikel bg-white radius-20 p-20 artikel-item" data-topik="Cerita Dampak">
+                <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib2.png?raw=true" alt="Gbr" class="img-radius mb-20" style="height: 150px; background: #ddd;">
+                <span class="tag-kategori bg-hijau-muda teks-hijau-tua">Cerita Dampak</span>
+                <h3 class="teks-hijau-tua mt-10">Dari satu bantuan, Hadir Banyak Harapan</h3>
+                <p style="font-size: 14px; color: #555;">Bagaimana bantuan yang kamu berikan memberikan dampak nyata...</p>
+                <a href="/artikel/satu-bantuan" class="btn-kuning w-100 text-center mt-20" style="text-decoration: none; display:block;">Baca Selengkapnya →</a>
+            </div>
+            <!-- Kartu 2 -->
+            <div class="card-artikel bg-white radius-20 p-20 artikel-item" data-topik="Komunitas">
+                <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib3.png?raw=true" alt="Gbr" class="img-radius mb-20" style="height: 150px; background: #ddd;">
+                <span class="tag-kategori bg-hijau-muda teks-hijau-tua">Komunitas</span>
+                <h3 class="teks-hijau-tua mt-10">Bersama, Kita Bisa Membantu Lebih Tepat</h3>
+                <p style="font-size: 14px; color: #555;">Cerita tentang komunitas yang bergerak bersama untuk menciptakan...</p>
+                <a href="/artikel/bersama-tepat" class="btn-kuning w-100 text-center mt-20" style="text-decoration: none; display:block;">Baca Selengkapnya →</a>
+            </div>
+            <!-- Kartu 3 -->
+            <div class="card-artikel bg-white radius-20 p-20 artikel-item" data-topik="Tips Donasi">
+                <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib4.png?raw=true" alt="Gbr" class="img-radius mb-20" style="height: 150px; background: #ddd;">
+                <span class="tag-kategori bg-hijau-muda teks-hijau-tua">Tips Donasi</span>
+                <h3 class="teks-hijau-tua mt-10">5 Hal Yang Perlu Kamu Tahu Sebelum Berdonasi</h3>
+                <p style="font-size: 14px; color: #555;">Tips dan panduan agar donasi kamu lebih aman dan tepat sasaran...</p>
+                <a href="/artikel/5-hal-donasi" class="btn-kuning w-100 text-center mt-20" style="text-decoration: none; display:block;">Baca Selengkapnya →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KABAR DARI NEEDMAP -->
+        <div class="kabar-needmap-box bg-hijau-tua text-white radius-20 p-30 flex-row mt-50" style="align-items: flex-start;">
+            <div class="flex-1">
+                <h2 style="font-size: 1.8em; margin-bottom: 10px;">📢 Kabar dari NEEDMAP</h2>
+                <p style="line-height: 1.6; margin-bottom: 30px;">Ikuti perkembangan, kegiatan, dan langkah kecil kami dalam membangun ekosistem bantuan yang lebih tepat sasaran.</p>
+                <a href="#" class="btn-kuning" style="text-decoration: none; padding: 12px 25px; border-radius: 20px; font-weight: bold; color: #038909;">Lihat Semua Berita →</a>
+            </div>
+            <div class="flex-1 list-kabar-container">
+                <!-- List 1 -->
+                <div class="kabar-item">
+                    <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib5.png?raw=true" alt="Kabar 1" class="kabar-img">
+                    <div>
+                        <span style="font-size: 12px; color: #ddd;">20 Oktober 2026</span> <span class="tag-kategori bg-kuning teks-hijau-tua" style="margin-left: 10px;">Kabar NEEDMAP</span>
+                        <h4 style="margin-top: 5px; margin-bottom: 0;">NEEDMAP Hadirkan Cara Baru untuk Menemukan Kebutuhan di Sekitar Kita</h4>
+                    </div>
+                </div>
+                <!-- List 2 -->
+                <div class="kabar-item">
+                    <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib6.png?raw=true" alt="Kabar 2" class="kabar-img">
+                    <div>
+                        <span style="font-size: 12px; color: #ddd;">7 September 2026</span> <span class="tag-kategori bg-kuning teks-hijau-tua" style="margin-left: 10px;">Kegiatan</span>
+                        <h4 style="margin-top: 5px; margin-bottom: 0;">Bersama Komunitas, Membangun Gerakan Donasi yang Lebih Bermakna</h4>
+                    </div>
+                </div>
+                <!-- List 3 -->
+                <div class="kabar-item">
+                    <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib7.png?raw=true" alt="Kabar 3" class="kabar-img">
+                    <div>
+                        <span style="font-size: 12px; color: #ddd;">15 September 2026</span> <span class="tag-kategori bg-kuning teks-hijau-tua" style="margin-left: 10px;">Produk</span>
+                        <h4 style="margin-top: 5px; margin-bottom: 0;">Mengenal Lebih Dekat Fitur Live Need Map</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAHUKAH KAMU -->
+        <div class="tahukah-kamu-box radius-20 p-30 flex-row mt-50" style="background-color: #f4f6dc;">
+            <div style="width: 150px; text-align: center;"><img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib75-removebg-preview.png?raw=true" alt="Puzzle Icon" style="width: 100px; height: 100px; background: #a5d04b; border-radius: 10px;"></div>
+            <div class="flex-1 teks-hijau-tua">
+                <h2 style="margin-bottom: 5px;">TAHUKAH KAMU?</h2>
+                <p style="font-weight: bold; margin-bottom: 5px;">Tidak semua kebutuhan harus dipenuhi dengan uang.</p>
+                <p style="margin-top: 0;">Barang, makanan, waktu, keterampilan, hingga dukungan lainnya juga dapat menjadi bentuk bantuan yang berarti.</p>
+            </div>
+        </div>
+
+        <!-- INSIGHT PILIHAN -->
+        <div class="mt-50">
+            <div class="flex-between">
+                <div>
+                    <h2 class="teks-hijau-tua" style="margin-bottom: 5px;">Insight Pilihan</h2>
+                    <p class="teks-hijau-tua" style="font-weight: bold; margin-top: 0;">Bantuan yang lebih tepat dimulai dari memahami kebutuhan.</p>
+                </div>
+                <a href="#" class="teks-hijau-tua" style="font-weight: bold; text-decoration: none;">Lihat Semua →</a>
+            </div>
+
+            <div class="insight-pilihan-grid mt-30">
+                <!-- Kartu Besar Kiri -->
+                <div class="card-pilihan-kiri bg-white radius-20">
+                    <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib8.png?raw=true" alt="Insight 1" class="img-kiri">
+                    <div class="p-30">
+                        <span class="tag-kategori bg-kuning teks-hijau-tua">Insight</span>
+                        <span style="font-size: 12px; color: #777; margin-left: 10px;">12 September 2026</span>
+                        <h3 class="teks-hijau-tua mt-10">Memahami Kebutuhan, Membangun Dampak yang Lebih Luas</h3>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 25px; line-height: 1.6;">Bagaimana bantuan yang tepat dapat memberikan dampak nyata bagi penerimanya...</p>
+                        <a href="#" class="btn-kuning" style="text-decoration: none; display:inline-block; padding: 12px 25px; border-radius: 20px;">Baca Selengkapnya →</a>
+                    </div>
+                </div>
+
+                <!-- 2 Kartu Kecil Kanan -->
+                <div class="grid-kanan">
+                    <!-- Kartu Kanan 1 -->
+                    <div class="card-pilihan-kanan bg-white radius-20 p-20">
+                        <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib9.png?raw=true" alt="Insight 2" class="img-kanan">
+                        <div class="konten-kanan">
+                            <span class="tag-kategori bg-kuning teks-hijau-tua">Tips Donasi</span>
+                            <h3 class="teks-hijau-tua mt-10" style="font-size: 1.1em; margin-bottom: 5px;">Donasi yang Tepat, Bukan Sekadar Memberi</h3>
+                            <p style="font-size: 13px; color: #555; margin-bottom: 15px;">Tips sederhana agar bantuanmu lebih berdampak.</p>
+                            <a href="#" class="btn-kuning" style="text-decoration: none; display:inline-block; padding: 8px 15px; font-size: 12px; border-radius: 20px;">Baca Selengkapnya →</a>
+                        </div>
+                    </div>
+                    <!-- Kartu Kanan 2 -->
+                    <div class="card-pilihan-kanan bg-white radius-20 p-20">
+                        <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib10.png?raw=true" alt="Insight 3" class="img-kanan">
+                        <div class="konten-kanan">
+                            <span class="tag-kategori bg-kuning teks-hijau-tua">Komunitas</span>
+                            <h3 class="teks-hijau-tua mt-10" style="font-size: 1.1em; margin-bottom: 5px;">Aksi Kecil, Dampak Besar</h3>
+                            <p style="font-size: 13px; color: #555; margin-bottom: 15px;">Bagaimana kolaborasi komunitas membawa perubahan nyata.</p>
+                            <a href="#" class="btn-kuning" style="text-decoration: none; display:inline-block; padding: 8px 15px; font-size: 12px; border-radius: 20px;">Baca Selengkapnya →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BANNER PENUTUP -->
+        <div class="banner-penutup bg-hijau-muda radius-20 p-50 flex-row mt-50">
+            <div class="flex-1 teks-hijau-tua">
+                <h2 style="font-size: 1.8em; margin-bottom: 10px;">Setiap kebutuhan punya cerita.<br>Mari jadi bagian dari perubahan.</h2>
+                <p style="margin-bottom: 30px;">Temukan kebutuhan di sekitarmu dan berikan bantuan yang benar-benar dibutuhkan.</p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="/jelajahi" class="btn-hijau" style="text-decoration: none; padding: 12px 25px;">Jelajahi Kebutuhan →</a>
+                    <a href="/buat" style="text-decoration: none; padding: 12px 25px; border: 2px solid #038909; color: #038909; border-radius: 20px; font-weight: bold;">Buat NEED</a>
+                </div>
+            </div>
+            <div style="width: 150px;"><img src="https://github.com/dilaa62/NEEDMAP/blob/main/ib11-removebg-preview%20(1).png?raw=true" alt="Puzzle Icon" style="width: 120px; height: 120px; background: #edd51c; border-radius: 10px;"></div>
+        </div>
+
+    <footer class="bg-krem">
+        <div class="sosmed-icons">
+            <img src="https://github.com/dilaa62/NEEDMAP/blob/main/yt.png?raw=true" alt="YouTube">
+            <img src="https://github.com/dilaa62/NEEDMAP/blob/main/ig.png?raw=true" alt="Instagram">
+            <img src="https://github.com/dilaa62/NEEDMAP/blob/main/x.png?raw=true" alt="X">
+            <img src="https://github.com/dilaa62/NEEDMAP/blob/main/tiktok.png?raw=true" alt="TikTok">
+        </div>
+        <h3 class="teks-hijau-tua">Ikuti NEEDMAP untuk inspirasi kebaikan terbaru</h3>
+        <p class="copyright">© 2026 NEEDMAP. All Rights Reserved</p>
+    </footer>
+
+    <!-- Script Filter Kategori -->
+    <script>
+        function filterTopik(topik, element) {
+            // Ubah tombol aktif
+            document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+
+            // Filter kartu artikel
+            const articles = document.querySelectorAll('.artikel-item');
+            articles.forEach(card => {
+                if (topik === 'Semua' || card.getAttribute('data-topik') === topik) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

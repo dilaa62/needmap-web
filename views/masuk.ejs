@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= judulWeb %></title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .auth-container { max-width: 500px; margin: 40px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; }
+        .auth-header { text-align: center; margin-bottom: 30px; }
+        .auth-title { font-size: 1.5em; color: #038909; margin-top: 20px; margin-bottom: 10px; font-weight: bold; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #038909; font-size: 14px; }
+        .form-control { width: 100%; padding: 12px 15px 12px 40px; border: 1px solid #999; border-radius: 10px; font-family: 'Poppins', sans-serif; box-sizing: border-box; outline: none; }
+        .form-control:focus { border-color: #038909; }
+        .input-icon-wrapper { position: relative; }
+        .input-icon-wrapper .icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-size: 18px; color: #038909; }
+        .input-icon-wrapper .icon-right { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 18px; color: #038909; cursor: pointer; }
+        .lupa-password { display: block; text-align: right; color: #038909; font-size: 13px; font-weight: bold; text-decoration: none; margin-top: -10px; margin-bottom: 20px; }
+        .btn-auth-hijau { background-color: #038909; color: white; border: none; padding: 15px; border-radius: 30px; font-weight: bold; width: 100%; cursor: pointer; font-size: 1.1em; }
+        .btn-auth-outline { background-color: white; color: #038909; border: 2px solid #edd51c; padding: 15px; border-radius: 30px; font-weight: bold; width: 100%; cursor: pointer; font-size: 1.1em; display: block; text-align: center; text-decoration: none; box-sizing: border-box; }
+        .garis-atau { display: flex; align-items: center; text-align: center; color: #038909; margin: 20px 0; font-weight: bold; font-size: 14px; }
+        .garis-atau::before, .garis-atau::after { content: ''; flex: 1; border-bottom: 1px solid #038909; margin: 0 10px; }
+    </style>
+</head>
+<body class="bg-krem">
+    <header>
+        <div class="logo"><img src="https://github.com/dilaa62/NEEDMAP/blob/main/LOGO.png?raw=true" alt="Logo NEEDMAP" class="logo-img"></div>
+        <nav>
+            <a href="/tentang">Tentang NEEDMAP</a>
+            <a href="/perjalanan">Perjalanan Kami</a>
+            <a href="/jelajahi">Jelajahi NEED</a>
+            <a href="/buat">Buat NEED</a>
+            <a href="/insight">Insight dan Berita</a>
+            <a href="/masuk" class="btn-masuk active">Masuk/Daftar</a>
+        </nav>
+    </header>
+
+    <section class="p-50 text-center teks-hijau-tua">
+        <h1 style="font-size: 2.2em; margin-bottom: 10px;">Satu langkah kecil, bisa berarti besar</h1>
+        <p style="font-size: 1.1em; max-width: 600px; margin: 0 auto; color: #333;">Masuk untuk menemukan kebutuhan di sekitarmu dan menjadi bagian dari perubahan.</p>
+
+        <div class="auth-container">
+            <div class="auth-header">
+                <img src="https://github.com/dilaa62/NEEDMAP/blob/main/LOGO.png?raw=true" alt="Logo" style="height: 40px;">
+            </div>
+            <h2 class="auth-title text-left">Selamat Datang<br>di NEEDMAP!</h2>
+            <p style="color: #333; margin-bottom: 30px; line-height: 1.5;">Yuk, mulai bantu dan terhubung dengan sekitar.</p>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label>Email</label>
+                    <div class="input-icon-wrapper">
+                        <span class="icon">✉</span>
+                        <input type="email" class="form-control" placeholder="Masukkan email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-icon-wrapper">
+                        <span class="icon">🔒</span>
+                        <input type="password" class="form-control" placeholder="Masukkan password">
+                        <span class="icon-right">👁</span>
+                    </div>
+                </div>
+                <a href="#" class="lupa-password">Lupa Password?</a>
+
+                <button type="submit" class="btn-auth-hijau">MASUK</button>
+            </form>
+
+            <div class="garis-atau">atau</div>
+            <!-- TOMBOL LOGIN GOOGLE -->
+            <a href="/auth/google" class="btn-auth-outline" style="border-color: #ddd; color: #555; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" style="width: 20px;">
+                Masuk dengan Google
+            </a>
+            <a href="/daftar" class="btn-auth-outline">👤 Belum punya akun? Daftar</a>
+        </div>
+    </section>
+
+    <!-- Silakan tambahkan Footer standar di sini -->
+</body>
+</html>
