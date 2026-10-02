@@ -9,8 +9,8 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mainController = require('./controllers/mainController');
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(process.cwd(), 'views'));
+app.use(express.static(path.join(process.cwd(), 'public')));
 
 // --- PENGATURAN SESSION (Sesi Login) ---
 app.use(session({
