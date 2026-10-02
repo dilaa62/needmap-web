@@ -79,8 +79,11 @@ app.get('/bantu-dana', mainController.tampilkanBantuDana);
 app.get('/bantu-barang', mainController.tampilkanBantuBarang);
 app.get('/bantu-lainnya', mainController.tampilkanBantuLainnya);
 
-// --- MENYALAKAN SERVER ---
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server NEEDMAP menyala! Buka http://localhost:${PORT}`);
-});
+// --- KODE LAMA YANG DIHAPUS/DICOMMENT ---
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//     console.log(`Server NEEDMAP menyala!`);
+// });
+
+// --- KODE BARU UNTUK NETLIFY ---
+module.exports = app;
